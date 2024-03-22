@@ -4,7 +4,7 @@ Matlab scripts to generate grid description files used for cdo regridding.
 
 Based on work by Jeremy Fyke, Andy Bliss and others.
 
-CISM has thickness in the grid g1 and velocity on grid g0
+CISM has thickness on the grid g1 and velocity on grid g0
 
 ## Main scripts for AIS and GrIS
 
