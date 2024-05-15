@@ -19,11 +19,11 @@ if exist(agrid.xyOutputFileName, 'file') ~= 0;
 end
 
 %% write 2D and 1d x,y
-wnc(xcenters-proj_info.falseeasting,agrid.xyOutputFileName,'x02','m','grid center x-coordinate',{'x0','y0'},0,'NETCDF4')
-wnc(ycenters-proj_info.falsenorthing,agrid.xyOutputFileName,'y02','m','grid center y-coordinate',{'x0','y0'},0,'NETCDF4')
+wnc(xcenters-proj_info.falseeasting+round(dx/2),agrid.xyOutputFileName,'x02','m','grid center x-coordinate',{'x0','y0'},0,'NETCDF4')
+wnc(ycenters-proj_info.falsenorthing+round(dx/2),agrid.xyOutputFileName,'y02','m','grid center y-coordinate',{'x0','y0'},0,'NETCDF4')
 
-wnc(squeeze(xcenters(:,1))-proj_info.falseeasting,agrid.xyOutputFileName,'x0','m','grid center x-coordinate','x0',0,'NETCDF4')
-wnc(squeeze(ycenters(1,:))-proj_info.falsenorthing,agrid.xyOutputFileName,'y0','m','grid center y-coordinate','y0',0,'NETCDF4')
+wnc(squeeze(xcenters(:,1))-proj_info.falseeasting+round(dx/2),agrid.xyOutputFileName,'x0','m','grid center x-coordinate','x0',0,'NETCDF4')
+wnc(squeeze(ycenters(1,:))-proj_info.falsenorthing+round(dx/2),agrid.xyOutputFileName,'y0','m','grid center y-coordinate','y0',0,'NETCDF4')
 
 end
 
